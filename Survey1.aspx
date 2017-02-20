@@ -6,8 +6,20 @@
 <script runat="server">
     void Click(Object s, EventArgs e)
     {
-        return;
-    }
+        feedbackLabel.Text = "Your name is: " + name.Value.First().ToString().ToUpper() + name.Value.Substring(1) + "<br />";
+        feedbackLabel.Text += "Your email is: " + email.Value +
+            "<br />";
+        feedbackLabel.Text += "You like to work with:<br />";
+        for (int i = 0; i <= serverModel.Items.Count - 1; i++) 
+        {
+          if (serverModel.Items[i].Selected) 
+          {
+            feedbackLabel.Text += " - " + serverModel.Items[i].Text +
+                "<br />";
+          }
+        }
+        feedbackLabel.Text += "You like .NET: " + likeDotNet.Value;
+        }
 </script>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
