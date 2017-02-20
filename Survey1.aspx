@@ -42,7 +42,8 @@
       </p>
       <!-- Display technology options -->
       <p>
-        Which server technologies do you use?<br />
+        Which server technology or technologies do you use?<br />
+          <small>[Press Ctrl for more than one]</small><br />
         <select id="serverModel" runat="server" multiple="true">
           <option>ASP.NET</option>
           <option>PHP</option>
